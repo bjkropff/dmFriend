@@ -1,18 +1,29 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
+/* Below will
+import  HeroService  from './hero.service';
+import DashboardComponent from './dashboard.component';
+import HeroesComponent from './heroes.component';
+import { HeroDetailComponent } from './hero-detail.component';
+import { TextComponent } from './text.component';
+*/
 import { HeroService } from './hero.service';
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { TextComponent } from './text.component';
+
 
 @Component({
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
     <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Heroes']">NPC</a>
+      <a [routerLink]="['Dashboard']">Roller</a>
+      <a [routerLink]="['Heroes']">Name Gen</a>
+      <a [routerLink]="['Heroes']">List of Heros</a>
+      <a [routerLink]="['Text']">Txt</a>
     </nav>
     <router-outlet></router-outlet>
   `,
@@ -25,7 +36,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 })
 @RouteConfig([
   {
-    path: '/dashboard',
+    path: '/',
     name: 'Dashboard',
     component: DashboardComponent,
     useAsDefault: true
@@ -39,10 +50,17 @@ import { HeroDetailComponent } from './hero-detail.component';
     path: '/heroes',
     name: 'Heroes',
     component: HeroesComponent
+  },
+  {
+    path: '/text',
+    name: 'Text',
+    component: TextComponent
+
   }
+
 ])
 export class AppComponent {
-  title = 'DM\'s Friend';
+  title = 'DM Buddy ';
 }
 
 

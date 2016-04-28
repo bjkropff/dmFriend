@@ -1,10 +1,13 @@
 <h3>Top </h3>
 <div class="grid grid-pad">
-  <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+  <div *ngFor="#hero of heroes" (click)="gotoDetail(hero)">
     <div class="module hero">
       <h4>{{hero.name}}</h4>
+
     </div>
   </div>
+  <textarea class="col-md-12">
+  </textarea>
 </div>
 
 

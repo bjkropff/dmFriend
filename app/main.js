@@ -11,6 +11,7 @@ System.register(['angular2/platform/browser', './app.component'], function(expor
                 app_component_1 = app_component_1_1;
             }],
         execute: function() {
+            //import bootstrap and AppCompenent from app.component.js (edit app.component.ts)
             browser_1.bootstrap(app_component_1.AppComponent);
         }
     }
@@ -19,5 +20,5 @@ System.register(['angular2/platform/browser', './app.component'], function(expor
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/ 
+*/
 //# sourceMappingURL=main.js.map
